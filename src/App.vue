@@ -38,6 +38,7 @@ const removeTodo = (todo) => {
   todos.value = todos.value.filter((t) => t != todo)
 }
 
+// listen to changes in todos state
 watch(
   todos,
   (newVal) => {
@@ -46,10 +47,12 @@ watch(
   { deep: true }
 )
 
+// watch for addition of new todos
 watch(name, (newVal) => {
   localStorage.setItem('name', newVal)
 })
 
+// watch for pop changes
 onMounted(() => {
   name.value = localStorage.getItem('name') || ''
   todos.value = JSON.parse(localStorage.getItem('todos') || [])
@@ -58,6 +61,7 @@ onMounted(() => {
 
 <template>
   <main class="app">
+    <!-- todo section starts -->
     <section class="greeting">
       <h2 class="title">
         What's up, <input type="text" placeholder="Name here" v-model="name" />
@@ -129,5 +133,12 @@ onMounted(() => {
         </div>
       </div>
     </section>
+
+    <h4>This was created as a VueJS side project</h4>
+
+    <span
+      >Courtesy &copy;
+      <a href="https://www.youtube.com/c/TylerPotts">Tyler Potts</a></span
+    >
   </main>
 </template>
