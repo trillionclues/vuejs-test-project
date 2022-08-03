@@ -62,6 +62,7 @@ onMounted(() => {
 <template>
   <main class="app">
     <!-- todo section starts -->
+
     <section class="greeting">
       <h2 class="title">
         What's up, <input type="text" placeholder="Name here" v-model="name" />
@@ -84,6 +85,7 @@ onMounted(() => {
 
         <div class="options">
           <!-- business label -->
+
           <label>
             <input
               type="radio"
@@ -91,11 +93,14 @@ onMounted(() => {
               value="business"
               v-model="input_category"
             />
+
             <span class="bubble business"></span>
+
             <div>Business</div>
           </label>
 
           <!-- personal label -->
+
           <label>
             <input
               type="radio"
@@ -103,7 +108,9 @@ onMounted(() => {
               value="personal"
               v-model="input_category"
             />
+
             <span class="bubble personal"></span>
+
             <div>Personal</div>
           </label>
         </div>
@@ -121,6 +128,7 @@ onMounted(() => {
       >
         <label>
           <input type="checkbox" v-model="todo.done" />
+
           <span :class="`bubble ${todo.category}`"></span>
         </label>
 
