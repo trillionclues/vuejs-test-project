@@ -61,8 +61,9 @@ onMounted(() => {
 
 <template>
   <main class="app">
-    <!-- todo section starts -->
+    <h1>Todo List Built with VueJS</h1>
 
+    <!-- todo section starts -->
     <section class="greeting">
       <h2 class="title">
         What's up, <input type="text" placeholder="Name here" v-model="name" />
@@ -73,7 +74,7 @@ onMounted(() => {
       <h3>CREATE A TODO</h3>
 
       <form @submit.prevent="addTodo">
-        <h4>What's on your todo list?</h4>
+        <h4>...it can be anything, literally!</h4>
 
         <input
           type="text"
@@ -121,6 +122,7 @@ onMounted(() => {
 
     <section class="todo-list">
       <h3>TODO LIST</h3>
+      <h4>Here you go Mister!</h4>
 
       <div
         v-for="todo in todos_asc"
@@ -144,8 +146,8 @@ onMounted(() => {
 
     <h4>This was created as a VueJS side project</h4>
 
-    <span
-      >Courtesy &copy;
+    <span>
+      &copy;
       <a href="https://www.youtube.com/c/TylerPotts">Tyler Potts</a></span
     >
   </main>
